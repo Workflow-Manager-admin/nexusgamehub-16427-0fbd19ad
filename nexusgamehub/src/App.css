@@ -8,6 +8,121 @@
   --main-font: 'Times New Roman', Times, serif;
 }
 
+.background-overlay {
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  background: var(--bg-overlay);
+  /* Provides overlay atop bg image for improved contrast */
+}
+
+.main-content-wrapper {
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.arcade-header {
+  width: 100%;
+  text-align: center;
+  font-family: var(--main-font), serif;
+  font-size: 2.6rem;
+  font-weight: bold;
+  color: #d2c5b2;
+  padding-top: 38px;
+  letter-spacing: 1px;
+  text-shadow: 0 4px 20px #221180ad, 0 1px #d2c5b2;
+  margin-bottom: 0.3em;
+}
+
+.main-navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+  justify-content: center;
+  background: transparent;
+  font-family: var(--main-font), serif;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.main-navbar .nav-link {
+  padding: 0.25em 1.2em;
+  border-radius: 13px;
+  transition: box-shadow 0.2s, color 0.2s;
+}
+.main-navbar .nav-link a {
+  color: #f4d990;
+  text-decoration: none;
+}
+.main-navbar .nav-link:hover, .main-navbar .nav-link:focus {
+  color: var(--kavia-orange);
+  box-shadow: 0 0 6px 2px var(--kavia-orange), 0 0 2px #fff;
+}
+.main-navbar .nav-link:hover a,
+.main-navbar .nav-link:focus a {
+  color: var(--kavia-orange);
+}
+
+.page {
+  max-width: 700px;
+  margin: 3rem auto 0 auto;
+  padding: 2.6rem 1.2rem 3.8rem 1.2rem;
+  background: rgba(34, 17, 100, 0.20);
+  border-radius: 20px;
+  box-shadow: 0 6px 42px 2px #15115259;
+}
+
+/* Typography and utility classes */
+.page-title {
+  font-size: 2rem;
+  color: #d2c5b2;
+  font-family: var(--main-font), serif;
+  letter-spacing: 0.5px;
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  text-shadow: 0 2px 10px #22118077;
+}
+.lead-text {
+  color: #ebe7dc;
+  font-size: 1.10rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.cta-link {
+  color: var(--kavia-orange);
+  text-shadow: 0 0 8px #fda94b99;
+  font-weight: bold;
+  transition: text-shadow .22s;
+}
+.cta-link:hover {
+  color: #fff6eb;
+  text-shadow: 0 0 20px #f7b45599;
+}
+
+.copyright-bar {
+  width: 100vw;
+  background: rgba(20, 15, 51, 0.76);
+  color: #d2c5b2;
+  text-align: center;
+  font-size: 1rem;
+  font-family: var(--main-font), serif;
+  font-weight: 500;
+  padding: 0.9rem 0 0.7rem 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0 -2px 10px #0007;
+  letter-spacing: 0.3px;
+  z-index: 9000;
+}
+
 body {
   margin: 0;
   font-family: var(--main-font), 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
@@ -22,10 +137,240 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.background-overlay {
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  background: var(--bg-overlay);
+  /* Provides overlay atop bg image for improved contrast */
+}
+
+.main-content-wrapper {
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.arcade-header {
+  width: 100%;
+  text-align: center;
+  font-family: var(--main-font), serif;
+  font-size: 2.6rem;
+  font-weight: bold;
+  color: #d2c5b2;
+  padding-top: 38px;
+  letter-spacing: 1px;
+  text-shadow: 0 4px 20px #221180ad, 0 1px #d2c5b2;
+  margin-bottom: 0.3em;
+}
+
+.main-navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+  justify-content: center;
+  background: transparent;
+  font-family: var(--main-font), serif;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.main-navbar .nav-link {
+  padding: 0.25em 1.2em;
+  border-radius: 13px;
+  transition: box-shadow 0.2s, color 0.2s;
+}
+.main-navbar .nav-link a {
+  color: #f4d990;
+  text-decoration: none;
+}
+.main-navbar .nav-link:hover, .main-navbar .nav-link:focus {
+  color: var(--kavia-orange);
+  box-shadow: 0 0 6px 2px var(--kavia-orange), 0 0 2px #fff;
+}
+.main-navbar .nav-link:hover a,
+.main-navbar .nav-link:focus a {
+  color: var(--kavia-orange);
+}
+
+.page {
+  max-width: 700px;
+  margin: 3rem auto 0 auto;
+  padding: 2.6rem 1.2rem 3.8rem 1.2rem;
+  background: rgba(34, 17, 100, 0.20);
+  border-radius: 20px;
+  box-shadow: 0 6px 42px 2px #15115259;
+}
+
+/* Typography and utility classes */
+.page-title {
+  font-size: 2rem;
+  color: #d2c5b2;
+  font-family: var(--main-font), serif;
+  letter-spacing: 0.5px;
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  text-shadow: 0 2px 10px #22118077;
+}
+.lead-text {
+  color: #ebe7dc;
+  font-size: 1.10rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.cta-link {
+  color: var(--kavia-orange);
+  text-shadow: 0 0 8px #fda94b99;
+  font-weight: bold;
+  transition: text-shadow .22s;
+}
+.cta-link:hover {
+  color: #fff6eb;
+  text-shadow: 0 0 20px #f7b45599;
+}
+
+.copyright-bar {
+  width: 100vw;
+  background: rgba(20, 15, 51, 0.76);
+  color: #d2c5b2;
+  text-align: center;
+  font-size: 1rem;
+  font-family: var(--main-font), serif;
+  font-weight: 500;
+  padding: 0.9rem 0 0.7rem 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0 -2px 10px #0007;
+  letter-spacing: 0.3px;
+  z-index: 9000;
+}
+
 .app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+.background-overlay {
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  background: var(--bg-overlay);
+  /* Provides overlay atop bg image for improved contrast */
+}
+
+.main-content-wrapper {
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.arcade-header {
+  width: 100%;
+  text-align: center;
+  font-family: var(--main-font), serif;
+  font-size: 2.6rem;
+  font-weight: bold;
+  color: #d2c5b2;
+  padding-top: 38px;
+  letter-spacing: 1px;
+  text-shadow: 0 4px 20px #221180ad, 0 1px #d2c5b2;
+  margin-bottom: 0.3em;
+}
+
+.main-navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+  justify-content: center;
+  background: transparent;
+  font-family: var(--main-font), serif;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.main-navbar .nav-link {
+  padding: 0.25em 1.2em;
+  border-radius: 13px;
+  transition: box-shadow 0.2s, color 0.2s;
+}
+.main-navbar .nav-link a {
+  color: #f4d990;
+  text-decoration: none;
+}
+.main-navbar .nav-link:hover, .main-navbar .nav-link:focus {
+  color: var(--kavia-orange);
+  box-shadow: 0 0 6px 2px var(--kavia-orange), 0 0 2px #fff;
+}
+.main-navbar .nav-link:hover a,
+.main-navbar .nav-link:focus a {
+  color: var(--kavia-orange);
+}
+
+.page {
+  max-width: 700px;
+  margin: 3rem auto 0 auto;
+  padding: 2.6rem 1.2rem 3.8rem 1.2rem;
+  background: rgba(34, 17, 100, 0.20);
+  border-radius: 20px;
+  box-shadow: 0 6px 42px 2px #15115259;
+}
+
+/* Typography and utility classes */
+.page-title {
+  font-size: 2rem;
+  color: #d2c5b2;
+  font-family: var(--main-font), serif;
+  letter-spacing: 0.5px;
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  text-shadow: 0 2px 10px #22118077;
+}
+.lead-text {
+  color: #ebe7dc;
+  font-size: 1.10rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.cta-link {
+  color: var(--kavia-orange);
+  text-shadow: 0 0 8px #fda94b99;
+  font-weight: bold;
+  transition: text-shadow .22s;
+}
+.cta-link:hover {
+  color: #fff6eb;
+  text-shadow: 0 0 20px #f7b45599;
+}
+
+.copyright-bar {
+  width: 100vw;
+  background: rgba(20, 15, 51, 0.76);
+  color: #d2c5b2;
+  text-align: center;
+  font-size: 1rem;
+  font-family: var(--main-font), serif;
+  font-weight: 500;
+  padding: 0.9rem 0 0.7rem 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0 -2px 10px #0007;
+  letter-spacing: 0.3px;
+  z-index: 9000;
 }
 
 .navbar {
@@ -42,6 +387,121 @@ body {
   z-index: 100;
 }
 
+.background-overlay {
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  background: var(--bg-overlay);
+  /* Provides overlay atop bg image for improved contrast */
+}
+
+.main-content-wrapper {
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.arcade-header {
+  width: 100%;
+  text-align: center;
+  font-family: var(--main-font), serif;
+  font-size: 2.6rem;
+  font-weight: bold;
+  color: #d2c5b2;
+  padding-top: 38px;
+  letter-spacing: 1px;
+  text-shadow: 0 4px 20px #221180ad, 0 1px #d2c5b2;
+  margin-bottom: 0.3em;
+}
+
+.main-navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+  justify-content: center;
+  background: transparent;
+  font-family: var(--main-font), serif;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.main-navbar .nav-link {
+  padding: 0.25em 1.2em;
+  border-radius: 13px;
+  transition: box-shadow 0.2s, color 0.2s;
+}
+.main-navbar .nav-link a {
+  color: #f4d990;
+  text-decoration: none;
+}
+.main-navbar .nav-link:hover, .main-navbar .nav-link:focus {
+  color: var(--kavia-orange);
+  box-shadow: 0 0 6px 2px var(--kavia-orange), 0 0 2px #fff;
+}
+.main-navbar .nav-link:hover a,
+.main-navbar .nav-link:focus a {
+  color: var(--kavia-orange);
+}
+
+.page {
+  max-width: 700px;
+  margin: 3rem auto 0 auto;
+  padding: 2.6rem 1.2rem 3.8rem 1.2rem;
+  background: rgba(34, 17, 100, 0.20);
+  border-radius: 20px;
+  box-shadow: 0 6px 42px 2px #15115259;
+}
+
+/* Typography and utility classes */
+.page-title {
+  font-size: 2rem;
+  color: #d2c5b2;
+  font-family: var(--main-font), serif;
+  letter-spacing: 0.5px;
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  text-shadow: 0 2px 10px #22118077;
+}
+.lead-text {
+  color: #ebe7dc;
+  font-size: 1.10rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.cta-link {
+  color: var(--kavia-orange);
+  text-shadow: 0 0 8px #fda94b99;
+  font-weight: bold;
+  transition: text-shadow .22s;
+}
+.cta-link:hover {
+  color: #fff6eb;
+  text-shadow: 0 0 20px #f7b45599;
+}
+
+.copyright-bar {
+  width: 100vw;
+  background: rgba(20, 15, 51, 0.76);
+  color: #d2c5b2;
+  text-align: center;
+  font-size: 1rem;
+  font-family: var(--main-font), serif;
+  font-weight: 500;
+  padding: 0.9rem 0 0.7rem 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0 -2px 10px #0007;
+  letter-spacing: 0.3px;
+  z-index: 9000;
+}
+
 .logo {
   font-size: 1.25rem;
   font-weight: 600;
@@ -50,8 +510,238 @@ body {
   gap: 8px;
 }
 
+.background-overlay {
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  background: var(--bg-overlay);
+  /* Provides overlay atop bg image for improved contrast */
+}
+
+.main-content-wrapper {
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.arcade-header {
+  width: 100%;
+  text-align: center;
+  font-family: var(--main-font), serif;
+  font-size: 2.6rem;
+  font-weight: bold;
+  color: #d2c5b2;
+  padding-top: 38px;
+  letter-spacing: 1px;
+  text-shadow: 0 4px 20px #221180ad, 0 1px #d2c5b2;
+  margin-bottom: 0.3em;
+}
+
+.main-navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+  justify-content: center;
+  background: transparent;
+  font-family: var(--main-font), serif;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.main-navbar .nav-link {
+  padding: 0.25em 1.2em;
+  border-radius: 13px;
+  transition: box-shadow 0.2s, color 0.2s;
+}
+.main-navbar .nav-link a {
+  color: #f4d990;
+  text-decoration: none;
+}
+.main-navbar .nav-link:hover, .main-navbar .nav-link:focus {
+  color: var(--kavia-orange);
+  box-shadow: 0 0 6px 2px var(--kavia-orange), 0 0 2px #fff;
+}
+.main-navbar .nav-link:hover a,
+.main-navbar .nav-link:focus a {
+  color: var(--kavia-orange);
+}
+
+.page {
+  max-width: 700px;
+  margin: 3rem auto 0 auto;
+  padding: 2.6rem 1.2rem 3.8rem 1.2rem;
+  background: rgba(34, 17, 100, 0.20);
+  border-radius: 20px;
+  box-shadow: 0 6px 42px 2px #15115259;
+}
+
+/* Typography and utility classes */
+.page-title {
+  font-size: 2rem;
+  color: #d2c5b2;
+  font-family: var(--main-font), serif;
+  letter-spacing: 0.5px;
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  text-shadow: 0 2px 10px #22118077;
+}
+.lead-text {
+  color: #ebe7dc;
+  font-size: 1.10rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.cta-link {
+  color: var(--kavia-orange);
+  text-shadow: 0 0 8px #fda94b99;
+  font-weight: bold;
+  transition: text-shadow .22s;
+}
+.cta-link:hover {
+  color: #fff6eb;
+  text-shadow: 0 0 20px #f7b45599;
+}
+
+.copyright-bar {
+  width: 100vw;
+  background: rgba(20, 15, 51, 0.76);
+  color: #d2c5b2;
+  text-align: center;
+  font-size: 1rem;
+  font-family: var(--main-font), serif;
+  font-weight: 500;
+  padding: 0.9rem 0 0.7rem 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0 -2px 10px #0007;
+  letter-spacing: 0.3px;
+  z-index: 9000;
+}
+
 .logo-symbol {
   color: var(--kavia-orange);
+}
+
+.background-overlay {
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  background: var(--bg-overlay);
+  /* Provides overlay atop bg image for improved contrast */
+}
+
+.main-content-wrapper {
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.arcade-header {
+  width: 100%;
+  text-align: center;
+  font-family: var(--main-font), serif;
+  font-size: 2.6rem;
+  font-weight: bold;
+  color: #d2c5b2;
+  padding-top: 38px;
+  letter-spacing: 1px;
+  text-shadow: 0 4px 20px #221180ad, 0 1px #d2c5b2;
+  margin-bottom: 0.3em;
+}
+
+.main-navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+  justify-content: center;
+  background: transparent;
+  font-family: var(--main-font), serif;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.main-navbar .nav-link {
+  padding: 0.25em 1.2em;
+  border-radius: 13px;
+  transition: box-shadow 0.2s, color 0.2s;
+}
+.main-navbar .nav-link a {
+  color: #f4d990;
+  text-decoration: none;
+}
+.main-navbar .nav-link:hover, .main-navbar .nav-link:focus {
+  color: var(--kavia-orange);
+  box-shadow: 0 0 6px 2px var(--kavia-orange), 0 0 2px #fff;
+}
+.main-navbar .nav-link:hover a,
+.main-navbar .nav-link:focus a {
+  color: var(--kavia-orange);
+}
+
+.page {
+  max-width: 700px;
+  margin: 3rem auto 0 auto;
+  padding: 2.6rem 1.2rem 3.8rem 1.2rem;
+  background: rgba(34, 17, 100, 0.20);
+  border-radius: 20px;
+  box-shadow: 0 6px 42px 2px #15115259;
+}
+
+/* Typography and utility classes */
+.page-title {
+  font-size: 2rem;
+  color: #d2c5b2;
+  font-family: var(--main-font), serif;
+  letter-spacing: 0.5px;
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  text-shadow: 0 2px 10px #22118077;
+}
+.lead-text {
+  color: #ebe7dc;
+  font-size: 1.10rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.cta-link {
+  color: var(--kavia-orange);
+  text-shadow: 0 0 8px #fda94b99;
+  font-weight: bold;
+  transition: text-shadow .22s;
+}
+.cta-link:hover {
+  color: #fff6eb;
+  text-shadow: 0 0 20px #f7b45599;
+}
+
+.copyright-bar {
+  width: 100vw;
+  background: rgba(20, 15, 51, 0.76);
+  color: #d2c5b2;
+  text-align: center;
+  font-size: 1rem;
+  font-family: var(--main-font), serif;
+  font-weight: 500;
+  padding: 0.9rem 0 0.7rem 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0 -2px 10px #0007;
+  letter-spacing: 0.3px;
+  z-index: 9000;
 }
 
 .container {
@@ -60,6 +750,121 @@ body {
   padding: 0 24px;
   width: 100%;
   box-sizing: border-box;
+}
+
+.background-overlay {
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  background: var(--bg-overlay);
+  /* Provides overlay atop bg image for improved contrast */
+}
+
+.main-content-wrapper {
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.arcade-header {
+  width: 100%;
+  text-align: center;
+  font-family: var(--main-font), serif;
+  font-size: 2.6rem;
+  font-weight: bold;
+  color: #d2c5b2;
+  padding-top: 38px;
+  letter-spacing: 1px;
+  text-shadow: 0 4px 20px #221180ad, 0 1px #d2c5b2;
+  margin-bottom: 0.3em;
+}
+
+.main-navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+  justify-content: center;
+  background: transparent;
+  font-family: var(--main-font), serif;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.main-navbar .nav-link {
+  padding: 0.25em 1.2em;
+  border-radius: 13px;
+  transition: box-shadow 0.2s, color 0.2s;
+}
+.main-navbar .nav-link a {
+  color: #f4d990;
+  text-decoration: none;
+}
+.main-navbar .nav-link:hover, .main-navbar .nav-link:focus {
+  color: var(--kavia-orange);
+  box-shadow: 0 0 6px 2px var(--kavia-orange), 0 0 2px #fff;
+}
+.main-navbar .nav-link:hover a,
+.main-navbar .nav-link:focus a {
+  color: var(--kavia-orange);
+}
+
+.page {
+  max-width: 700px;
+  margin: 3rem auto 0 auto;
+  padding: 2.6rem 1.2rem 3.8rem 1.2rem;
+  background: rgba(34, 17, 100, 0.20);
+  border-radius: 20px;
+  box-shadow: 0 6px 42px 2px #15115259;
+}
+
+/* Typography and utility classes */
+.page-title {
+  font-size: 2rem;
+  color: #d2c5b2;
+  font-family: var(--main-font), serif;
+  letter-spacing: 0.5px;
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  text-shadow: 0 2px 10px #22118077;
+}
+.lead-text {
+  color: #ebe7dc;
+  font-size: 1.10rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.cta-link {
+  color: var(--kavia-orange);
+  text-shadow: 0 0 8px #fda94b99;
+  font-weight: bold;
+  transition: text-shadow .22s;
+}
+.cta-link:hover {
+  color: #fff6eb;
+  text-shadow: 0 0 20px #f7b45599;
+}
+
+.copyright-bar {
+  width: 100vw;
+  background: rgba(20, 15, 51, 0.76);
+  color: #d2c5b2;
+  text-align: center;
+  font-size: 1rem;
+  font-family: var(--main-font), serif;
+  font-weight: 500;
+  padding: 0.9rem 0 0.7rem 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0 -2px 10px #0007;
+  letter-spacing: 0.3px;
+  z-index: 9000;
 }
 
 .hero {
@@ -72,10 +877,240 @@ body {
   gap: 24px;
 }
 
+.background-overlay {
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  background: var(--bg-overlay);
+  /* Provides overlay atop bg image for improved contrast */
+}
+
+.main-content-wrapper {
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.arcade-header {
+  width: 100%;
+  text-align: center;
+  font-family: var(--main-font), serif;
+  font-size: 2.6rem;
+  font-weight: bold;
+  color: #d2c5b2;
+  padding-top: 38px;
+  letter-spacing: 1px;
+  text-shadow: 0 4px 20px #221180ad, 0 1px #d2c5b2;
+  margin-bottom: 0.3em;
+}
+
+.main-navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+  justify-content: center;
+  background: transparent;
+  font-family: var(--main-font), serif;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.main-navbar .nav-link {
+  padding: 0.25em 1.2em;
+  border-radius: 13px;
+  transition: box-shadow 0.2s, color 0.2s;
+}
+.main-navbar .nav-link a {
+  color: #f4d990;
+  text-decoration: none;
+}
+.main-navbar .nav-link:hover, .main-navbar .nav-link:focus {
+  color: var(--kavia-orange);
+  box-shadow: 0 0 6px 2px var(--kavia-orange), 0 0 2px #fff;
+}
+.main-navbar .nav-link:hover a,
+.main-navbar .nav-link:focus a {
+  color: var(--kavia-orange);
+}
+
+.page {
+  max-width: 700px;
+  margin: 3rem auto 0 auto;
+  padding: 2.6rem 1.2rem 3.8rem 1.2rem;
+  background: rgba(34, 17, 100, 0.20);
+  border-radius: 20px;
+  box-shadow: 0 6px 42px 2px #15115259;
+}
+
+/* Typography and utility classes */
+.page-title {
+  font-size: 2rem;
+  color: #d2c5b2;
+  font-family: var(--main-font), serif;
+  letter-spacing: 0.5px;
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  text-shadow: 0 2px 10px #22118077;
+}
+.lead-text {
+  color: #ebe7dc;
+  font-size: 1.10rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.cta-link {
+  color: var(--kavia-orange);
+  text-shadow: 0 0 8px #fda94b99;
+  font-weight: bold;
+  transition: text-shadow .22s;
+}
+.cta-link:hover {
+  color: #fff6eb;
+  text-shadow: 0 0 20px #f7b45599;
+}
+
+.copyright-bar {
+  width: 100vw;
+  background: rgba(20, 15, 51, 0.76);
+  color: #d2c5b2;
+  text-align: center;
+  font-size: 1rem;
+  font-family: var(--main-font), serif;
+  font-weight: 500;
+  padding: 0.9rem 0 0.7rem 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0 -2px 10px #0007;
+  letter-spacing: 0.3px;
+  z-index: 9000;
+}
+
 .subtitle {
   color: var(--kavia-orange);
   font-weight: 500;
   font-size: 1.1rem;
+}
+
+.background-overlay {
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  background: var(--bg-overlay);
+  /* Provides overlay atop bg image for improved contrast */
+}
+
+.main-content-wrapper {
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.arcade-header {
+  width: 100%;
+  text-align: center;
+  font-family: var(--main-font), serif;
+  font-size: 2.6rem;
+  font-weight: bold;
+  color: #d2c5b2;
+  padding-top: 38px;
+  letter-spacing: 1px;
+  text-shadow: 0 4px 20px #221180ad, 0 1px #d2c5b2;
+  margin-bottom: 0.3em;
+}
+
+.main-navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+  justify-content: center;
+  background: transparent;
+  font-family: var(--main-font), serif;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.main-navbar .nav-link {
+  padding: 0.25em 1.2em;
+  border-radius: 13px;
+  transition: box-shadow 0.2s, color 0.2s;
+}
+.main-navbar .nav-link a {
+  color: #f4d990;
+  text-decoration: none;
+}
+.main-navbar .nav-link:hover, .main-navbar .nav-link:focus {
+  color: var(--kavia-orange);
+  box-shadow: 0 0 6px 2px var(--kavia-orange), 0 0 2px #fff;
+}
+.main-navbar .nav-link:hover a,
+.main-navbar .nav-link:focus a {
+  color: var(--kavia-orange);
+}
+
+.page {
+  max-width: 700px;
+  margin: 3rem auto 0 auto;
+  padding: 2.6rem 1.2rem 3.8rem 1.2rem;
+  background: rgba(34, 17, 100, 0.20);
+  border-radius: 20px;
+  box-shadow: 0 6px 42px 2px #15115259;
+}
+
+/* Typography and utility classes */
+.page-title {
+  font-size: 2rem;
+  color: #d2c5b2;
+  font-family: var(--main-font), serif;
+  letter-spacing: 0.5px;
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  text-shadow: 0 2px 10px #22118077;
+}
+.lead-text {
+  color: #ebe7dc;
+  font-size: 1.10rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.cta-link {
+  color: var(--kavia-orange);
+  text-shadow: 0 0 8px #fda94b99;
+  font-weight: bold;
+  transition: text-shadow .22s;
+}
+.cta-link:hover {
+  color: #fff6eb;
+  text-shadow: 0 0 20px #f7b45599;
+}
+
+.copyright-bar {
+  width: 100vw;
+  background: rgba(20, 15, 51, 0.76);
+  color: #d2c5b2;
+  text-align: center;
+  font-size: 1rem;
+  font-family: var(--main-font), serif;
+  font-weight: 500;
+  padding: 0.9rem 0 0.7rem 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0 -2px 10px #0007;
+  letter-spacing: 0.3px;
+  z-index: 9000;
 }
 
 .title {
@@ -85,12 +1120,242 @@ body {
   margin: 0;
 }
 
+.background-overlay {
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  background: var(--bg-overlay);
+  /* Provides overlay atop bg image for improved contrast */
+}
+
+.main-content-wrapper {
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.arcade-header {
+  width: 100%;
+  text-align: center;
+  font-family: var(--main-font), serif;
+  font-size: 2.6rem;
+  font-weight: bold;
+  color: #d2c5b2;
+  padding-top: 38px;
+  letter-spacing: 1px;
+  text-shadow: 0 4px 20px #221180ad, 0 1px #d2c5b2;
+  margin-bottom: 0.3em;
+}
+
+.main-navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+  justify-content: center;
+  background: transparent;
+  font-family: var(--main-font), serif;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.main-navbar .nav-link {
+  padding: 0.25em 1.2em;
+  border-radius: 13px;
+  transition: box-shadow 0.2s, color 0.2s;
+}
+.main-navbar .nav-link a {
+  color: #f4d990;
+  text-decoration: none;
+}
+.main-navbar .nav-link:hover, .main-navbar .nav-link:focus {
+  color: var(--kavia-orange);
+  box-shadow: 0 0 6px 2px var(--kavia-orange), 0 0 2px #fff;
+}
+.main-navbar .nav-link:hover a,
+.main-navbar .nav-link:focus a {
+  color: var(--kavia-orange);
+}
+
+.page {
+  max-width: 700px;
+  margin: 3rem auto 0 auto;
+  padding: 2.6rem 1.2rem 3.8rem 1.2rem;
+  background: rgba(34, 17, 100, 0.20);
+  border-radius: 20px;
+  box-shadow: 0 6px 42px 2px #15115259;
+}
+
+/* Typography and utility classes */
+.page-title {
+  font-size: 2rem;
+  color: #d2c5b2;
+  font-family: var(--main-font), serif;
+  letter-spacing: 0.5px;
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  text-shadow: 0 2px 10px #22118077;
+}
+.lead-text {
+  color: #ebe7dc;
+  font-size: 1.10rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.cta-link {
+  color: var(--kavia-orange);
+  text-shadow: 0 0 8px #fda94b99;
+  font-weight: bold;
+  transition: text-shadow .22s;
+}
+.cta-link:hover {
+  color: #fff6eb;
+  text-shadow: 0 0 20px #f7b45599;
+}
+
+.copyright-bar {
+  width: 100vw;
+  background: rgba(20, 15, 51, 0.76);
+  color: #d2c5b2;
+  text-align: center;
+  font-size: 1rem;
+  font-family: var(--main-font), serif;
+  font-weight: 500;
+  padding: 0.9rem 0 0.7rem 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0 -2px 10px #0007;
+  letter-spacing: 0.3px;
+  z-index: 9000;
+}
+
 .description {
   font-size: 1.1rem;
   line-height: 1.5;
   color: var(--text-secondary);
   max-width: 600px;
   margin-bottom: 16px;
+}
+
+.background-overlay {
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  background: var(--bg-overlay);
+  /* Provides overlay atop bg image for improved contrast */
+}
+
+.main-content-wrapper {
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.arcade-header {
+  width: 100%;
+  text-align: center;
+  font-family: var(--main-font), serif;
+  font-size: 2.6rem;
+  font-weight: bold;
+  color: #d2c5b2;
+  padding-top: 38px;
+  letter-spacing: 1px;
+  text-shadow: 0 4px 20px #221180ad, 0 1px #d2c5b2;
+  margin-bottom: 0.3em;
+}
+
+.main-navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+  justify-content: center;
+  background: transparent;
+  font-family: var(--main-font), serif;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.main-navbar .nav-link {
+  padding: 0.25em 1.2em;
+  border-radius: 13px;
+  transition: box-shadow 0.2s, color 0.2s;
+}
+.main-navbar .nav-link a {
+  color: #f4d990;
+  text-decoration: none;
+}
+.main-navbar .nav-link:hover, .main-navbar .nav-link:focus {
+  color: var(--kavia-orange);
+  box-shadow: 0 0 6px 2px var(--kavia-orange), 0 0 2px #fff;
+}
+.main-navbar .nav-link:hover a,
+.main-navbar .nav-link:focus a {
+  color: var(--kavia-orange);
+}
+
+.page {
+  max-width: 700px;
+  margin: 3rem auto 0 auto;
+  padding: 2.6rem 1.2rem 3.8rem 1.2rem;
+  background: rgba(34, 17, 100, 0.20);
+  border-radius: 20px;
+  box-shadow: 0 6px 42px 2px #15115259;
+}
+
+/* Typography and utility classes */
+.page-title {
+  font-size: 2rem;
+  color: #d2c5b2;
+  font-family: var(--main-font), serif;
+  letter-spacing: 0.5px;
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  text-shadow: 0 2px 10px #22118077;
+}
+.lead-text {
+  color: #ebe7dc;
+  font-size: 1.10rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.cta-link {
+  color: var(--kavia-orange);
+  text-shadow: 0 0 8px #fda94b99;
+  font-weight: bold;
+  transition: text-shadow .22s;
+}
+.cta-link:hover {
+  color: #fff6eb;
+  text-shadow: 0 0 20px #f7b45599;
+}
+
+.copyright-bar {
+  width: 100vw;
+  background: rgba(20, 15, 51, 0.76);
+  color: #d2c5b2;
+  text-align: center;
+  font-size: 1rem;
+  font-family: var(--main-font), serif;
+  font-weight: 500;
+  padding: 0.9rem 0 0.7rem 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0 -2px 10px #0007;
+  letter-spacing: 0.3px;
+  z-index: 9000;
 }
 
 .btn {
@@ -105,11 +1370,356 @@ body {
   transition: background-color 0.2s ease;
 }
 
+.background-overlay {
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  background: var(--bg-overlay);
+  /* Provides overlay atop bg image for improved contrast */
+}
+
+.main-content-wrapper {
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.arcade-header {
+  width: 100%;
+  text-align: center;
+  font-family: var(--main-font), serif;
+  font-size: 2.6rem;
+  font-weight: bold;
+  color: #d2c5b2;
+  padding-top: 38px;
+  letter-spacing: 1px;
+  text-shadow: 0 4px 20px #221180ad, 0 1px #d2c5b2;
+  margin-bottom: 0.3em;
+}
+
+.main-navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+  justify-content: center;
+  background: transparent;
+  font-family: var(--main-font), serif;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.main-navbar .nav-link {
+  padding: 0.25em 1.2em;
+  border-radius: 13px;
+  transition: box-shadow 0.2s, color 0.2s;
+}
+.main-navbar .nav-link a {
+  color: #f4d990;
+  text-decoration: none;
+}
+.main-navbar .nav-link:hover, .main-navbar .nav-link:focus {
+  color: var(--kavia-orange);
+  box-shadow: 0 0 6px 2px var(--kavia-orange), 0 0 2px #fff;
+}
+.main-navbar .nav-link:hover a,
+.main-navbar .nav-link:focus a {
+  color: var(--kavia-orange);
+}
+
+.page {
+  max-width: 700px;
+  margin: 3rem auto 0 auto;
+  padding: 2.6rem 1.2rem 3.8rem 1.2rem;
+  background: rgba(34, 17, 100, 0.20);
+  border-radius: 20px;
+  box-shadow: 0 6px 42px 2px #15115259;
+}
+
+/* Typography and utility classes */
+.page-title {
+  font-size: 2rem;
+  color: #d2c5b2;
+  font-family: var(--main-font), serif;
+  letter-spacing: 0.5px;
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  text-shadow: 0 2px 10px #22118077;
+}
+.lead-text {
+  color: #ebe7dc;
+  font-size: 1.10rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.cta-link {
+  color: var(--kavia-orange);
+  text-shadow: 0 0 8px #fda94b99;
+  font-weight: bold;
+  transition: text-shadow .22s;
+}
+.cta-link:hover {
+  color: #fff6eb;
+  text-shadow: 0 0 20px #f7b45599;
+}
+
+.copyright-bar {
+  width: 100vw;
+  background: rgba(20, 15, 51, 0.76);
+  color: #d2c5b2;
+  text-align: center;
+  font-size: 1rem;
+  font-family: var(--main-font), serif;
+  font-weight: 500;
+  padding: 0.9rem 0 0.7rem 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0 -2px 10px #0007;
+  letter-spacing: 0.3px;
+  z-index: 9000;
+}
+
 .btn:hover {
   background-color: #FF8B4D;
+}
+
+.background-overlay {
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  background: var(--bg-overlay);
+  /* Provides overlay atop bg image for improved contrast */
+}
+
+.main-content-wrapper {
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.arcade-header {
+  width: 100%;
+  text-align: center;
+  font-family: var(--main-font), serif;
+  font-size: 2.6rem;
+  font-weight: bold;
+  color: #d2c5b2;
+  padding-top: 38px;
+  letter-spacing: 1px;
+  text-shadow: 0 4px 20px #221180ad, 0 1px #d2c5b2;
+  margin-bottom: 0.3em;
+}
+
+.main-navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+  justify-content: center;
+  background: transparent;
+  font-family: var(--main-font), serif;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.main-navbar .nav-link {
+  padding: 0.25em 1.2em;
+  border-radius: 13px;
+  transition: box-shadow 0.2s, color 0.2s;
+}
+.main-navbar .nav-link a {
+  color: #f4d990;
+  text-decoration: none;
+}
+.main-navbar .nav-link:hover, .main-navbar .nav-link:focus {
+  color: var(--kavia-orange);
+  box-shadow: 0 0 6px 2px var(--kavia-orange), 0 0 2px #fff;
+}
+.main-navbar .nav-link:hover a,
+.main-navbar .nav-link:focus a {
+  color: var(--kavia-orange);
+}
+
+.page {
+  max-width: 700px;
+  margin: 3rem auto 0 auto;
+  padding: 2.6rem 1.2rem 3.8rem 1.2rem;
+  background: rgba(34, 17, 100, 0.20);
+  border-radius: 20px;
+  box-shadow: 0 6px 42px 2px #15115259;
+}
+
+/* Typography and utility classes */
+.page-title {
+  font-size: 2rem;
+  color: #d2c5b2;
+  font-family: var(--main-font), serif;
+  letter-spacing: 0.5px;
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  text-shadow: 0 2px 10px #22118077;
+}
+.lead-text {
+  color: #ebe7dc;
+  font-size: 1.10rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.cta-link {
+  color: var(--kavia-orange);
+  text-shadow: 0 0 8px #fda94b99;
+  font-weight: bold;
+  transition: text-shadow .22s;
+}
+.cta-link:hover {
+  color: #fff6eb;
+  text-shadow: 0 0 20px #f7b45599;
+}
+
+.copyright-bar {
+  width: 100vw;
+  background: rgba(20, 15, 51, 0.76);
+  color: #d2c5b2;
+  text-align: center;
+  font-size: 1rem;
+  font-family: var(--main-font), serif;
+  font-weight: 500;
+  padding: 0.9rem 0 0.7rem 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0 -2px 10px #0007;
+  letter-spacing: 0.3px;
+  z-index: 9000;
 }
 
 .btn-large {
   padding: 12px 24px;
   font-size: 1.1rem;
+}
+
+.background-overlay {
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  background: var(--bg-overlay);
+  /* Provides overlay atop bg image for improved contrast */
+}
+
+.main-content-wrapper {
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.arcade-header {
+  width: 100%;
+  text-align: center;
+  font-family: var(--main-font), serif;
+  font-size: 2.6rem;
+  font-weight: bold;
+  color: #d2c5b2;
+  padding-top: 38px;
+  letter-spacing: 1px;
+  text-shadow: 0 4px 20px #221180ad, 0 1px #d2c5b2;
+  margin-bottom: 0.3em;
+}
+
+.main-navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+  justify-content: center;
+  background: transparent;
+  font-family: var(--main-font), serif;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.main-navbar .nav-link {
+  padding: 0.25em 1.2em;
+  border-radius: 13px;
+  transition: box-shadow 0.2s, color 0.2s;
+}
+.main-navbar .nav-link a {
+  color: #f4d990;
+  text-decoration: none;
+}
+.main-navbar .nav-link:hover, .main-navbar .nav-link:focus {
+  color: var(--kavia-orange);
+  box-shadow: 0 0 6px 2px var(--kavia-orange), 0 0 2px #fff;
+}
+.main-navbar .nav-link:hover a,
+.main-navbar .nav-link:focus a {
+  color: var(--kavia-orange);
+}
+
+.page {
+  max-width: 700px;
+  margin: 3rem auto 0 auto;
+  padding: 2.6rem 1.2rem 3.8rem 1.2rem;
+  background: rgba(34, 17, 100, 0.20);
+  border-radius: 20px;
+  box-shadow: 0 6px 42px 2px #15115259;
+}
+
+/* Typography and utility classes */
+.page-title {
+  font-size: 2rem;
+  color: #d2c5b2;
+  font-family: var(--main-font), serif;
+  letter-spacing: 0.5px;
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  text-shadow: 0 2px 10px #22118077;
+}
+.lead-text {
+  color: #ebe7dc;
+  font-size: 1.10rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.cta-link {
+  color: var(--kavia-orange);
+  text-shadow: 0 0 8px #fda94b99;
+  font-weight: bold;
+  transition: text-shadow .22s;
+}
+.cta-link:hover {
+  color: #fff6eb;
+  text-shadow: 0 0 20px #f7b45599;
+}
+
+.copyright-bar {
+  width: 100vw;
+  background: rgba(20, 15, 51, 0.76);
+  color: #d2c5b2;
+  text-align: center;
+  font-size: 1rem;
+  font-family: var(--main-font), serif;
+  font-weight: 500;
+  padding: 0.9rem 0 0.7rem 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0 -2px 10px #0007;
+  letter-spacing: 0.3px;
+  z-index: 9000;
 }
