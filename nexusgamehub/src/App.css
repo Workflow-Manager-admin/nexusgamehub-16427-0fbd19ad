@@ -4,13 +4,20 @@
   --text-color: #ffffff;
   --text-secondary: rgba(255, 255, 255, 0.7);
   --border-color: rgba(255, 255, 255, 0.1);
+  --bg-overlay: rgba(22,33,62,0.80);
+  --main-font: 'Times New Roman', Times, serif;
 }
 
 body {
   margin: 0;
-  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
-  background-color: var(--kavia-dark);
+  font-family: var(--main-font), 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  background: var(--kavia-dark);
   color: var(--text-color);
+  background-image: url('https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1500&q=80');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

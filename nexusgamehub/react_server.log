@@ -22,3 +22,26 @@ Compiling...
 Compiled successfully!
 webpack compiled successfully
 Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/kavia/workspace/code-generation/nexusgamehub-16427-0fbd19ad/nexusgamehub/src'
+ERROR in ./src/App.js 5:0-74
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/kavia/workspace/code-generation/nexusgamehub-16427-0fbd19ad/nexusgamehub/src'
+
+webpack compiled with 1 error
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/kavia/workspace/code-generation/nexusgamehub-16427-0fbd19ad/nexusgamehub/src'
+ERROR in ./src/App.js 5:0-74
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/kavia/workspace/code-generation/nexusgamehub-16427-0fbd19ad/nexusgamehub/src'
+
+webpack compiled with 1 error
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/kavia/workspace/code-generation/nexusgamehub-16427-0fbd19ad/nexusgamehub/src'
+ERROR in ./src/App.js 5:0-74
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/kavia/workspace/code-generation/nexusgamehub-16427-0fbd19ad/nexusgamehub/src'
+
+webpack compiled with 1 error
